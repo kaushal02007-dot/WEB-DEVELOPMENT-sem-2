@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //by default var hota h agr seedha a=10 likh denge toh
+        //HOISTING: 1. the variable declaration and function declaration will move to the top of the scope
+        //2. hoisting will applicable for var variable opnly not for let and const becoz let and const are block level scope...
+    a=10
+    console.log(a)
+    var a
+    //this will give 10 as the output...kyoki var mi hoisting hoti h toh var at the top of scope chle jaaega (a=10 k uppr aa jaega) 
+    
+    //a=10
+    // console.log(a)
+    // let a....this will show referrence error
+
+    //TEMPORAL DEAD ZONE : when we declare the variable with let and const without its proper initilization then the variable lies in temporal dead zone until its proper initilization
+    //example:  a=10
+    //          console.log(a)
+    //          let a
+    console.log(b)
+    var b   // this will show undefined
+    //similarly
+    console.log(c)
+    let c
+
+    //take an array with length 10 and keep 10 differnt student marks in between 0 to 40 and check which student marks is pass or fail
+    // use filter method 
+    let marks =[32,11,25,17,30,35,39,28,22,33]
+      let newmarks = marks.filter((x)=>{
+    if (x>=16) {
+        console.log(x,"pass")
+    }
+    else {
+console.log(x,"fail")
+    }
+      })
+
+      //find the sum all the elments inside an array with for loop
+    </script>
+</body>
+</html> 
