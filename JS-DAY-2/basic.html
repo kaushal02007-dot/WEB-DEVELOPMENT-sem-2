@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //PUSH:Add element in the last of array
+        let arr = ["apple","banana"]
+        let newarr = arr.push("cherry")
+        console.log(newarr)  //this will give length of array
+        console.log(arr)  //this will give array with 3 elements
+        
+        //POP:remove element from the last of the array
+        let nums = [1,2,3,4]
+        let newnum = arr.pop()
+        console.log(newnum)  //this will give the last element(4) which is get removed
+        console.log(nums)    //this will array 1,2,3
+
+      //UNSHIFT: array ki starting mi kuch add krna h ...return push ki trh hi karega length of array
+      //SHIFT: array ki starting mi se kuch remove krna h ...return pop ki trh hi karega
+
+      //QUESTION : Reverse the array using push and pop method only
+      let array = [1,2,3,4]
+      let reverarray = []
+      while (array.length>0){
+        reverarray.push(array.pop())
+      }
+      console.log(reverarray)
+
+      //QUESTION: Remove all negative integers from the given array
+      let integer = [-1,2,3,-4,5,-6]
+      let positive =[]
+      while (integer.length>0){
+        let posnum = integer.shift()  //can use pop
+        if (posnum>0){
+            positive.push(posnum)  //if pop is used then here unshift
+        }
+      }
+      console.log(positive)
+      //Question : a given array is pelindrome or not
+        function pelindromes(){
+      let pelindrome = [1,3,3,1]
+      let original = [...pelindrome] // [1,3,3,1}spred operator use krlo ya phir for loop use kr skte hn apni given array ko original array mi push krne k leye
+      let reverse = []  //[1,3,3,1]
+    
+while (pelindrome.length>0){
+        reverse.push(pelindrome.pop())
+      }
+    //check krenge ki original array or reverse array k elements match kr re hn ya nhi
+    //iterate karenge original ko na ki pelindrome ko
+  
+    for (i=0;i<original.length;i++){
+        if(original[i]!=reverse[i]){
+            return "this is not a palindrome"
+        }  
+    }
+    return "this array is pelindrome"
+}
+console.log(pelindrome)
+console.log(pelindromes())
+    </script>
+</body>
+</html>
