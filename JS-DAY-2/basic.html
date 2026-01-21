@@ -10,7 +10,7 @@
         //PUSH:Add element in the last of array
         let arr = ["apple","banana"]
         let newarr = arr.push("cherry")
-        console.log(newarr)  //this will give length of array
+        console.log(newarr)  //this will return length of array
         console.log(arr)  //this will give array with 3 elements
         
         //POP:remove element from the last of the array
@@ -59,8 +59,56 @@ while (pelindrome.length>0){
     }
     return "this array is pelindrome"
 }
-console.log(pelindrome)
 console.log(pelindromes())
+
+//TASKS:
+//1. Remove all the duplicate elements from the given array
+//2. Split even and odd numbers from an given array
+//3. Move all zeros to end of the array [2,0,3,0,8,9]
+
+//ANSWERS
+//1.
+// function duplicates(){
+// let duplicate = [1,1,2,3,4,4,5,5]
+// let duporiginal = [...duplicate]
+// let nodup =[]
+// while(duplicate.length>0){
+//   nodup.push(duplicate.pop())
+
+// }
+// for (i=0;i<duporiginal.length;i++){
+//   if(duporiginal[i]==nodup[i]){
+//     nodup.pop[i]
+//   }
+// return nodup
+
+// }
+// }
+// console.log(duplicates())
+
+//2.
+let numbers = [1,2,3,4,5,6,7,8]
+let odd = []
+let even = []
+let index =0
+while (index < numbers.length){
+  if (numbers[index]%2==0){
+    even.push(numbers[index])
+  }
+  else{
+    odd.push(numbers[index])
+  }
+index++
+}
+console.log("even numbers", even)
+console.log("odd numbers", odd)
+
+//3.
+let zeros = [2,0,3,0,8,9]
+let result = []
+
+
+
     </script>
 </body>
 </html>

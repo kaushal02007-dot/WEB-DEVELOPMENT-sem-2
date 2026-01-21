@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // trim():it deletes extra space 
+        // split():
+        let sentence = "I am comma separated senetnce"
+        let words = sentence.split(" ")
+        console.log(words)
+
+        let sentence2 = "I am a comma separated senetnce"
+        let words2 = sentence2.split("a")  // esko ko split kryte hn vo remove ho jaata h ... so I m comm .... a is removed uski jgh comm aa jaaega
+    
+        console.log(words2)
+
+        //find out the occurence of "r" in the given string using soplit method
+        let str = "tu meri me tera me teri tu mera"
+        let count = str.split("r").length - 1
+        console.log(count)
+    </script>
+</body>
+</html>
