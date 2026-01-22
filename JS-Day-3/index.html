@@ -20,8 +20,81 @@
 
         //find out the occurence of "r" in the given string using soplit method
         let str = "tu meri me tera me teri tu mera"
-        let count = str.split("r").length - 1
+        let count = str.split("r").length - 1 // jitne comma hote hn utne occurence hote hn usss cheej k jisko split kiya h ... so length 5 hn toh counting -1 hoga 
         console.log(count)
+
+
+        //TYPES OF FUNCTION:
+
+        // 1.regular fxn (syncronous)
+    
+        // 2. arrow function (asyncronous)
+        // 3. callback function (asyncronous)
+        // 4. anonymous function (syncronous)
+        // 5. first class function (asyncronous)
+        // 6. higher order (asyncronous)
+        // 7. self invoking function (IIFE) (syncronous)
+    
+    
+        // js is SYNCRONOUS (1task complete hone k baad jaate ham dusre task pr) and in js everything is OBJECT.. 
+    // ASYNCRONOUS - multiuple execution 1 tym pr ho rha hota h ..
+     
+    // REGULAR FUNCTION
+    function demo(){
+        console.log("demo")
+    }
+    demo()
+    function sample(a,b){
+        return a + b
+    }
+    console.log(sample(5,10))
+    //regular function si syncromous becoz phle demo vala fucntion chlega phir sample chlega 
+
+    //ARROW FUCNTION:doesnot need return and function keyword and it will perform asynchronously
+    //regular fucntion ko ab ham arrow function mi convert karenge
+    //for good practise we use const becoz good parctise jiss se ham usko reassign nhi kr paaenge
+    const test =()=> c+d   //edhr return and fucntion keywordki need nhi hoti ye khud se hi return kr deta h (by default)
+    console.log(test(c,d))
+
+    //agr multi line of code h toh ..(1 line se njada mi code aa rha h) toh return use krna padga
+    // const test =()=> {
+    // c+d
+    // }
+
+    //ANONYMOUS FUCNTION: jiss function ka KOI NAAM nhi hota
+    // function(){
+    //map ka sample
+    // }    
+
+    //SETTIME OUT- ascynronous fucntion 
+    //setinterval : count badhta jata h
+    //date
+
+    //CALLBACK FUCNTION:
+
+    //self invoking fxn : // what is the diff bw regular fxn and self invoking fxn 
+    (function(){
+        console.log("this is an IIFE")
+    }) ()
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+        
+
+
     </script>
 </body>
 </html>
