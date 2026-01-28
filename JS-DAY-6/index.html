@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content{
+            color:aqua,
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading1">HEADING 1</h1>
+    <div id="content">
+        <h1>hello world</h1>
+        <p> child of parent CONTENT</p>
+    </div>
+    <script>
+        //rooot element: HTML
+        //HAMBURGER MENU:resposnive krte hi navigation bar 3 lines bn jaata h ... phir 3 line p click krk navigation bar khul jaata h 
+        //CRUD:create, read,update,delete
+        // DOM: dcument objetc model;
+        //it is a programming interface for web document.its purpose is manipulation and interaction
+        //with the help of dom we can make static site a dynamic site...hr 1 event(clicking on buttton , submitting form) k ssath jo chnages hote hn unko events bolte hn
+//runnner.prototype.gameover=()=>{} 
+
+//mETHODS TO SEELCT ELEMENTS FROM THE DOM:
+//getElementById() 2.getElementByClassName() 3.getElementTagName(tagname) 4.qyerySelector(selector)
+const headingelement = document.getElementById("heading1")
+//getElementById
+console.log(headingelement)
+
+ //to change the text and style
+ headingelement.textContent="New Heading 1"  //abh heading 1 ki jigh new heading 1 aa jaega ...so textContent is used to change the text
+ headingelement.style.color = "blue"
+  headingelement.style.backgroundColor = "grey"
+
+  //4. query selector :uss phele element ko target karega jo amtch kr jaaega
+  const contents = document.querySelector("#content p")  //content k child p ko target kjena h toh ... agr h1 ko krna h toh write "#content h1"
+ //query mi id h toh # lagana or class h toh dot lagana (.)
+  //change the text content of the selcted paragraph
+  contents.textContent = " this is modified content of the selected paragraph"
+// chnage the style of the selected paragraph
+contents.style.color = "brown"
+
+  //**USE CASE sbh k 
+  
+
+
+        
+    </script>
+</body>
+</html>
