@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--TASK1-->
+    <section id = "profile"> 
+        <h2>User Profile</h2>
+        <p>Name : John</p>
+        <p>role : Developer</p>
+    </section>
+
+    <!--TASK2-->
+    <p class = "important">HTML</p>
+     <p class = "important">CSS</p>
+      <p class = "important">Javascript</p>
+    <script>
+        //TASK1
+       const profile = document.getElementById("profile")
+       profile.style.backgroundColor = "tomato"
+       profile.style.padding = "15px"
+       profile.style.textAlign = "center"
+
+       //TASK2
+       const imp = document.getElementsByClassName("important")
+       //imp.style.color = "yellow"...it will not work we have to iterate it becoz a same class name can be used in different places in the whole file
+       console.log(imp)
+       //for color
+    for(let i =0; i<imp.length;i++){  //htmlcollection naam k object misaare elemnts aajaenge which have same class.. so wo array mi aaega ...or array ko irrate krne k leye we need to use either amp or loop
+        imp[i].style.color = "blue"
+        imp[i].style.fontSize = "22px"
+    }
+    //for incresed font size
+    //  for(let i =0; i<imp.length;i++){  
+    //     imp[i].style.fontSize = "22px"
+    // }
+    </script>
+</body>
+</html>
