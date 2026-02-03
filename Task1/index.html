@@ -17,6 +17,28 @@
     <p class = "important">HTML</p>
      <p class = "important">CSS</p>
       <p class = "important">Javascript</p>
+
+      <!--TASK 3-->
+      <p>paragraph1</p>
+      <p>paragraph 2</p>
+      <p>paragraph 3</p>
+      <p>paragraph4</p>
+      <p>paragraph5</p>
+
+      <!--TASK 4-->
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+
+      <!--Task 5-->
+      <section id = "content">
+        <h2>Article</h2>
+        <p>paragarph </p>
+        <p>paragarph 2</p>
+        <p>paragarph 3</p>
+      </section>
+
+
     <script>
         //TASK1
        const profile = document.getElementById("profile")
@@ -27,16 +49,66 @@
        //TASK2
        const imp = document.getElementsByClassName("important")
        //imp.style.color = "yellow"...it will not work we have to iterate it becoz a same class name can be used in different places in the whole file
-       console.log(imp)
-       //for color
-    for(let i =0; i<imp.length;i++){  //htmlcollection naam k object misaare elemnts aajaenge which have same class.. so wo array mi aaega ...or array ko irrate krne k leye we need to use either amp or loop
+       //console.log(imp)
+     
+       for(let i =0; i<imp.length;i++){  //htmlcollection naam k object misaare elemnts aajaenge which have same class.. so wo array mi aaega ...or array ko irrate krne k leye we need to use either amp or loop
+          //for color
         imp[i].style.color = "blue"
+         //for incresed font size
         imp[i].style.fontSize = "22px"
-    }
-    //for incresed font size
-    //  for(let i =0; i<imp.length;i++){  
-    //     imp[i].style.fontSize = "22px"
-    // }
+        
+       }
+//total count in console....we just need to print the length
+    console.log(imp.length)
+
+    //TASK 3
+    const task3 = document.getElementsByTagName("p")
+    console.log(task3)  //this will give array collection in the form of an array
+    //jo repeated element hota h vo html collection  mi aata h jaise class or paragrapgh so vo array k form mi aata h (CLASS NAME AND TAG ANME HAM ITERATE KRENGE)
+
+    //here the p tag is repeated jo we need to iterate it like class name 
+    
+       for(let i =0; i<task3.length;i++){
+        if (i%2==0){
+            task3[i].style.color = "blue"
+        }
+        else{
+             task3[i].style.color = "red"
+        }
+        
+       }
+        task3[task3.length-1].style.fontWeight="bold"
+
+
+        //TASK 4
+        const task4 = document.querySelector(".box")
+        
+            task4.style.backgroundColor = "green"
+            task4.textContent = "i am first" //targeted class k content ko change krdega  textContent
+
+        //when we want ki teeno box class k uppr changes hon jaaye tohhhh
+        //use querySelectorAll use krk ...usko simply loop mi krdena 
+        //ROUND THE CORNERS ...DO IT BY YOURSELF
+
+        //TASK 5
+        // const task5 = document.querySelectorAll("#content p")  //descendant selector...selector k child p ko target kiya h 
+        // for(let i =0; i<task4.length;i++){
+        //     task4[i].style.color = "purple"
+            
+        // }
+// ORRRRRRRRRRRRR
+        const section = document.getElementById("content")  //content id k through apne element ko choose kiya h
+        const task5 = section.getElementsByTagName("p")
+        for(let i =0; i<task5.length;i++){
+           task4[i].style.color = "purple";
+            
+         }
+
+
+
+        
+   
+    
     </script>
 </body>
 </html>

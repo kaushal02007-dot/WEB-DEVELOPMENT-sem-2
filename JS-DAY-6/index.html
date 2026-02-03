@@ -26,10 +26,11 @@
 //runnner.prototype.gameover=()=>{} 
 
 //mETHODS TO SEELCT ELEMENTS FROM THE DOM:
-//getElementById() 2.getElementByClassName() 3.getElementTagName(tagname) 4.qyerySelector(selector)
+//getElementById() 2.getElementsByClassName() 3.getElementTagName(tagname) 4.qyerySelector(selector) 5.querySelectorAll()
 const headingelement = document.getElementById("heading1")
 //getElementById
 console.log(headingelement)
+console.dir(headingelement)
 
  //to change the text and style
  headingelement.textContent="New Heading 1"  //abh heading 1 ki jigh new heading 1 aa jaega ...so textContent is used to change the text
@@ -37,19 +38,25 @@ console.log(headingelement)
   headingelement.style.backgroundColor = "grey"
   
 
-  //4. query selector :uss phele element ko target karega jo amtch kr jaaega
+  //4. QUERY SELECTOR : uss phele element ko target karega jo match kr jaaega
   const contents = document.querySelector("#content p")  //content k child p ko target kjena h toh ... agr h1 ko krna h toh write "#content h1"
  //query mi id h toh # lagana or class h toh dot lagana (.)
   //change the text content of the selcted paragraph
-  contents.textContent = " this is modified content of the selected paragraph"
+  //const contents = document.querySelector("p")...jo phela paragraph tag hoga uska target karega...  
+  contents.style.textContent = " this is modified content of the selected paragraph"
 // chnage the style of the selected paragraph
 contents.style.color = "brown"
 
   //**USE CASE sbh k 
+
+  //agr koi aisi id vala element h jis ki id hi exist hi krri h toh null print hokr k atat h console mi
+  //agrrrr class exist hni h krtih  toh html collection (array k trh ka smjh skte hn) eski length 0 aati h 
   
+ //5. QUERYSELECTORALL:sbh saare elements ko select krna ho
+// const contents = document.querySelector("#id/ .class/ tagname") 
+  //ye all query selctor hame node list(node =head,title,html , h1, h4vagera) return krta h     
+  //id selector k leye toh queryselctorALL sense banata nhi hkyoki ..id unique hone ki wjh se 1 hi elemnt ki ho skti h..
 
-
-        
     </script>
 </body>
 </html>
