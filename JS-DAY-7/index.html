@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--textContent ki trh or b built in properties hn-->
+    <!--display : none and visibility : hidden ...none mi space b hatt jaat h ..hidden mi space rheta h 
+    display : none and visibility : hidden dodno se jo hamara text hota h vo hid eho jata h buttt
+    in display : none jo text tah uska space b hatt jata h screen p se prrr visibility:hidden mi text hatt jata h but uska space bchta h -->
+       <!--Task 5-->
+     
+      <div id = "guest">
+        welcome <span style = "display:none">guest</span>
+
+      </div>
+
+      <div id = "guest2">
+          welcome2 <span style = "display:none">guest</span>
+
+        </div>
+
+        <div id = "guest3">
+          welcome3 <span style = "display:none">guest</span>
+
+
+        </div>
+        <div id = "guest4">
+          welcome4 <span style = "display:none">guest</span>
+
+
+        </div>
+
+      <script>
+     //TEXTCONTENT: it changes/get all the text(even the hidden one)....prr vo hideen text browser p hni dikhega...vo console mi dikhega ...kyoki usko js hi read kr skta h
+     //basically it ignore the dispaly : none
+      const section = document.getElementById("guest").textContent
+       console.log(section)
+
+       //we can even change the hidden text
+      //  const section = document.getElementById("guest").textContent ="changed the all previous text"
+      //  console.log(section)
+      //but this will change the hidden and no thidden text both ..or en sbh ki jigh vo nya vala text visible ho jaaega
+
+
+      //.INNERTEXT: it changes/get only the visible text.
+      //it dont ignore dispaly:none
+       const section2 = document.getElementById("guest2").innerText
+       console.log(section2)
+      
+       //we can also change the visible text
+      //  const section2 = document.getElementById("guest2").innerText = "changed the text"
+      //  console.log(section2)
+
+      
+      //.innerHTML: (text plus html tags ) this will display the whole code present inside the targted id/class/tag etc...
+      const section3 = document.getElementById("guest3").innerHTML
+       console.log(section3)
+
+       //also if have written any tag like bold tag then all the above two will not make it bold they will just show <b> content </b>
+       //but innerhtml consider tags so it will make it bold
+       const section4 = document.getElementById("guest4").innerHTML = "<b>hello world</b>"
+       console.log(section3)
+
+
+
+      </script>
+</body>
+</html>

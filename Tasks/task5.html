@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+          <!--Task 5-->
+      <section id = "content">
+        <h2>Article</h2>
+        <p>paragarph 1 </p>
+        <p>paragarph 2</p>
+        <p>paragarph 3</p>
+      </section>
+    <script>
+                //TASK 5
+        // const task5 = document.querySelectorAll("#content p")  //descendant selector...selector k child p ko target kiya h 
+        // for(let i =0; i<task4.length;i++){
+        //     task4[i].style.color = "purple"
+            
+        // }
+// ORRRRRRRRRRRRR
+const section = document.getElementById("content")  //content id k through apne element ko choose kiya h
+        const task5 = section.getElementsByTagName("p")
+        for(let i =0; i<task5.length;i++){
+           task5[i].style.color = "purple";
+            
+         }
+
+    </script>
+</body>
+</html>
