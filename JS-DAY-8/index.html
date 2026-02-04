@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--CRUD OPERATIONS KRENGE-->
+    <div id = "content">
+        <p>this is a paragrapgh</p>
+    </div>
+
+    <div id = "gallery">
+        
+    </div>
+    <div id = "digiclock"></div>
+    
+    <script>
+        //to create a element:
+        //paragarph elemnt certae krna chate hn toh
+        const para = document.createElement("p")
+        //text p toh dena hoga ab tag k andr
+        para.textContent="This is a dynamically added paragraph"
+        //abh usko dekhna h toh 
+        console.log(para) //ess se console mi render hoga ye
+        //ab ess para ko kidhr dalna chaate ho...div mi daalan chate hn sooo hame uss div ko target kran pdega
+
+        //APPEND ELEMENT
+        document.getElementById("content").appendChild(para)
+        //abh daal do..using append jb target ho gya h toh 
+
+        //REMOVE ELEMENT
+        //AGR KISI ELEMENT KO DELEtE KRNA H TOh
+        document.querySelector("#content p").remove() //paargraph  p ko tagname se targte hni krnege kyoki baaki k p b affect ho skte hn
+
+
+        //DYNAMICALLY IMG CREATE IN JS
+        //create se element create hota h ..or set se attribute add hote hn element k
+        const img = document.createElement("img")
+        img.setAttribute("src","https:th.bing.com/th/id/OIP.ibUSTb7eKAw8vvu1b4joAQHaEK?o=7&cb=defcachec2rm=3&rs=1&pid=ImgDetMain&o=7&rm=3")
+        img.setAttribute("alt","this is a img") 
+
+        const gallery = document.getElementById("gallery")
+        gallery.appendChild(img)
+
+        //DOM TRAVERSAL PROIPERTIES
+        //.parentelement ka use ham targeted tag k parent ko target krne k leeye use krte hn
+
+        //children: child ko target krne k leye
+        //sibling : sibling ko krne k leye
+
+
+        //DATE METHOD: 1 pre built pre degined object method h 
+        setInterval(() =>{
+
+        
+        let date=new Date()
+        console.log(date)
+        //console mi ja kr dekho watch aa gyi hogi
+        let hour =date.getHours()
+        let min =date.getMinutes()
+        let sec = date.getSeconds()
+        //ab enko browser mi render jrne k leye 1 id honi chaiye or then append
+         const clock = document.getElementById("digiclock")
+        clock.textContent=`${hour}:${min}:${sec}`
+        },1000)
+       
+
+
+
+        
+
+       
+    </script>
+</body>
+</html>
