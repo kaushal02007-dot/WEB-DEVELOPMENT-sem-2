@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--EVENTS-->
+    <!--onclick is a event-->    
+    <button id ="btn" onclick="handleClick()">click me</button>  <!--handleClick() this a fxn call so ye js mi define b krna padega ess fucntion kojo-->
+
+    <!--QUESTION:add a H1 tag and button and when user clcik on the button the color of the h1 will change-->
+    <h1 id="heading">this is a h1 tag</h1>
+    <button id ="btn1" onclick="h1click()">button</button>  
+    <script>
+      function handleClick(){
+        document.getElementById("btn").textContent="clicked"
+      }
+      //edhr abh fucntion defien kr deya ...now target that part and here we cchanged the text of button on clicking it ...so it is dynamic now
+     
+function h1click(){
+     document.getElementById("heading")
+     heading.style.color = "blue"
+}
+    </script>
+</body>
+</html>
