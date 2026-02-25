@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Today we see how to handle forms in javascript -->
+     <!--hrr input tag k ande name attribute important kyo hota h -->
+     <!-- <input type="text" id="myinput"
+     onchange ="handleChange()" name ="fullname"> agrr name use nhi krte hn toh url mim aaega hi nhi...submit krne p..or udhr nhi aaega toh server p jaaega -->
+     <!--checkbox...radio button..dropdown list mi hmae value att b dena hgota h kyokiii ...text vext mi toh khud se input dete hn ..pr enn  sbh mi ham just choose krte hn toh value hame hi dena hooga-->
+     <!--onchange bs jb hi trigger hoga jb user kuch value dega ya choose krega options ko-->
+     <!-- addevent listener  mi onchange vagera ko hata denge -->
+
+         <input type="text" id="myinput">
+
+    <script>
+    document.getElementById("myinput").addEventListener("change",(event)=>{
+        //here event is the synthetic event which comes under addeventlister's callback function. it will print the event object which stores all information about the form tag.   
+        console.log(event.target.value) 
+    
+    //event.target will print the targeted element and event.target.value will print the user input value(enetred by the user)
+    
+document.getElementById("output").textContent="change detected!!!"
+})
+    </script>
+</body>
+</html>

@@ -13,6 +13,14 @@
     <!--QUESTION:add a H1 tag and button and when user clcik on the button the color of the h1 will change-->
     <h1 id="heading">this is a h1 tag</h1>
     <button id ="btn1" onclick="h1click()">button</button>  
+
+     <!--QUESTION: Create a button such that when clicks on button 1 h2 tag with text and iamge will render below the button-->
+
+    <button id ="btn2" onclick ="imgclick()">BUTTON </button>
+    <h2>textttt</h2>
+    <div id = "gallery"> </div>
+
+
     <script>
       function handleClick(){
         document.getElementById("btn").textContent="clicked"
@@ -22,6 +30,14 @@
 function h1click(){
      document.getElementById("heading")
      heading.style.color = "blue"
+}
+function imgclick(){
+const img = document.createElement("img")
+        img.setAttribute("src","https:th.bing.com/th/id/OIP.ibUSTb7eKAw8vvu1b4joAQHaEK?o=7&cb=defcachec2rm=3&rs=1&pid=ImgDetMain&o=7&rm=3")
+        img.setAttribute("alt","this is a img") 
+
+        const gallery = document.getElementById("gallery")
+        gallery.appendChild(img)
 }
     </script>
 </body>

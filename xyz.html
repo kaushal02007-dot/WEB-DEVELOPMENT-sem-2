@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id = "xyx"> 
+        <p>this is a para</p>
+        <p>this a 2nd para</p>
+        <h1>this is a h1</h1>
+    </div> -->
+    <!-- <div id = "guest">
+        welcome <span style = "visibility:hidden">guest</span>
+        <span style = "visibility:hidden">guest2</span>
+        <span style = "visibility:hidden">guest3</span>
+        hyyyyyyyyyyyyyyy -->
+
+            <!-- <div id = "content">
+        <p>this is a paragrapgh</p>
+    <h1>hgfhdg</h1>
+    </div> -->
+    <!-- <div id="gallery">
+
+    </div> -->
+           
+<script>
+        // const dib= document.querySelectorAll("#xyx p") 
+        // for (let i=0;i<dib.length;i++){
+        //      dib[i].style.color = "blue"
+        // }
+        // dib.style.color = "blue"
+        
+        // console.log(dib)
+        // console.dir(dib)
+        // const guest = document.getElementById("guest").textContent ="mknmjhyut"
+        // console.log(guest)
+        // const para = document.createElement("p")
+        // para.textContent="this is a added para"
+        // console.log(para)
+        // document.getElementById("content").appendChild(para)
+    //    const image = document.createElement("img")
+    //     image.setAttribute("src","https:th.bing.com/th/id/OIP.ibUSTb7eKAw8vvu1b4joAQHaEK?o=7&cb=defcachec2rm=3&rs=1&pid=ImgDetMain&o=7&rm=3")
+    //     image.setAttribute("alt", "")
+
+    //     const db = document.getElementById("gallery").appendChild(image)
+    //     console.log(image)
+
+let myPromise = new Promise((resolve, reject)=>{
+    let data="this is my data";
+    if(data){
+        resolve(data);
+    }else{
+        reject("error: no data found");
+    }
+});
+console.log(myPromise);
+myPromise.then((d)=>{
+    console.log(d)
+
+},(e)=>{
+    console.log(e)
+})
+
+        
+    
+      
+
+
+</script>
+</body>
+</html>

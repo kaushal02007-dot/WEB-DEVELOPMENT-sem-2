@@ -8,6 +8,7 @@
 <body>
     <!--CRUD OPERATIONS KRENGE-->
     <div id = "content">
+        <p></p>
         <p>this is a paragrapgh</p>
     </div>
 
@@ -15,20 +16,22 @@
         
     </div>
     <div id = "digiclock"></div>
+    <div id ="12hourclock"></div>
     
     <script>
         //to create a element:
         //paragarph elemnt certae krna chate hn toh
         const para = document.createElement("p")
-        //text p toh dena hoga ab tag k andr
         para.textContent="This is a dynamically added paragraph"
+        //text p toh dena hoga ab tag k andr
+
         //abh usko dekhna h toh 
         console.log(para) //ess se console mi render hoga ye
         //ab ess para ko kidhr dalna chaate ho...div mi daalan chate hn sooo hame uss div ko target kran pdega
 
         //APPEND ELEMENT
         document.getElementById("content").appendChild(para)
-        //abh daal do..using append jb target ho gya h toh 
+        //abh daal do..using append jb target ho gya h toh ...now thus will come after the already existing para
 
         //REMOVE ELEMENT
         //AGR KISI ELEMENT KO DELEtE KRNA H TOh
@@ -52,6 +55,7 @@
 
 
         //DATE METHOD: 1 pre built pre degined object method h 
+
         setInterval(() =>{
 
         
@@ -64,6 +68,27 @@
         //ab enko browser mi render jrne k leye 1 id honi chaiye or then append
          const clock = document.getElementById("digiclock")
         clock.textContent=`${hour}:${min}:${sec}`
+        },1000)
+
+        //FOR 12 HOUR WATCH....
+        setInterval(()=>{
+            let Date = new Date()
+            console.log(Date)
+            let hours = Date.getHours
+            let mins = Date.getMinutes
+            let secs = Date.getSeconds
+            let period = "AM";
+            if (hours >= 12) {
+            period = "PM";
+        }
+
+           if (hours > 12) {
+          hours = hours - 12;
+        }
+        const tclock = document.getElementById("12hourclock")
+              
+            tclock.textContent = `${hours}:${mins}:${secs}`
+
         },1000)
     </script> 
 </body>
