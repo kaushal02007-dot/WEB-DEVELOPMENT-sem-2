@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //when we asyn and syn then syn will run before async...syn blocking ...asyn unblocking???
+        //kyi saaare async function de rkrhen hon toh ...jo settime out km time chl rha h vo phele print ho jaaega
+        console.log("1")
+setTimeout(()=>{
+    console.log("2")
+},5000)
+
+setTimeout(()=>{
+    console.log("3")
+},3000)
+
+setTimeout(()=>{
+    console.log("4")
+},2000)
+
+console.log("5")   // result will be 1 5 4 3 2
+
+//DISADAVNTAGES OF CALLBACK HELL: delay in exection ...dekatt in readibility etc etc
+
+
+//promise is used to handle asyncronous function in a better trhan call back hell
+//3 state of promise function: pending,fulfil, rejected
+//promise consumers : .then and .catch
+//if promise is fullfilled then it will go to .then() method
+
+//if promise is rejected then it will go to .catch() method
+
+//diff bw mwthod and function is ...method is pre and user both defined ...buuttt fxn is mostly user defined
+//promise is pre defined constructor...and it act as object so we call promise a object constructor
+//pre defined method mi 1 new naam ka keyword lgta h
+
+//eg of promise fucntion 
+let pro = new Promise((resolve, reject) => {
+    let proposal = "true"
+    if (proposal) {
+        resolve()
+    } else {
+        reject()
+    }
+})
+
+pro.then(() => console.log("proposal accepted"))
+   .catch(() => console.log("proposal rejected"))
+   //here we will get proposal accepted becozz ...if k andr jo proposal h toh agr khyi b proposal exist kr rha h toh if vaali print ho rha 
+   //abh beshk propossal ki value kuch bhi h
+
+   let pro1 = new Promise((resolve, reject) => {
+    let proposal = "false"
+    if (proposal === "true") {  //here we need to give condition === true vran ye phir se proposal accepted hi print krdega ..
+        resolve()
+    } else {
+        reject()
+    }
+})
+
+pro1.then(() => console.log("proposal accepted"))
+   .catch(() => console.log("proposal rejected"))
+
+
+
+    </script>
+</body>
+</html>
